@@ -3,15 +3,15 @@ attr_accessor   :password
 attr_accessible :name, :email, :password, :password_confirmation
 email_regex= /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-validates :email ,  :present =>true,
+validates :email ,  :presence =>true,
 					:format => {:with=> email_regex},
 					:uniqueness =>{:case_sensitive=>false}
 
 validates :name ,   :length => {:maximum=> 20}
 validates :password, :presence =>true,
-					 :confirmation => true
+					 :confirmation => true,
 					 :length => {:within=> 6..40}
-before_saves :encrypt_password
+before_save :encrypt_password
 def has_password?(submitted_password)
 encrypted_password == ecnrypt(submitted_password)
 end
