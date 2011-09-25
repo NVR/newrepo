@@ -1,1 +1,10 @@
-<%= @user.email %>,<%= @user.name %>
+<table class="profile" summary= "Profile information">
+<tr>
+<td class ="main">
+<h1>
+<%= gravatar_for @user %>
+<%= @user.email %>,<%= @user.name%>
+</h1>
+</td>
+</tr>
+</table>
