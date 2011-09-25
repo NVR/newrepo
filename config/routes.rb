@@ -1,9 +1,15 @@
 Newrepo::Application.routes.draw do
+root :to => 'pages#home'
+ match '/contact', :to=>'pages#contact' 
+ match '/about', :to=>'pages#about' 
+ match '/help', :to=>'pages#help' 
+  match '/event', :to=>'pages#event' 
   get "pages/home"
-
-  get "pages/contact"
-
   get "pages/event"
+  get "pages/contact"
+	get "pages/help"
+	get "pages/about"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

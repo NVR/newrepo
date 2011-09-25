@@ -20,6 +20,9 @@ font-size: 120%;
 padding: 20px;
 background: #fff 
 }
+section h1{
+font-size: 7;
+}
 a{
 color: #2d544a;
 text-decoration: none;
