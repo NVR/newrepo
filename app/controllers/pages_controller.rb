@@ -11,7 +11,6 @@ class PagesController < ApplicationController
   @title="event"
   end
   
-  def pages
-  end
+  
 
 end
