@@ -1,4 +1,10 @@
 Newrepo::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/event"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
